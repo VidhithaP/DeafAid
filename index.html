@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deaf Aid - TensorFlow.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <nav>
+        <div class="leftsec">
+            <img src="pics/icons8-ear-48.png" class="earimg" alt="Ear Icon" />
+            <div class="logo"><a href="#home">DEAF AID</a></div>
+        </div>
+        <div class="about"><a href="#about">ABOUT</a></div>
+    </nav>
+
+    <main id="home">
+        <h1>Welcome to Deaf Aid</h1>
+
+        <div class="button-container">
+            <button id="start-camera">Start Camera</button>
+            <button id="start-microphone">Start Microphone</button>
+            <button id="toggle-keyboard">Open Keyboard</button>
+        </div>
+
+        <!-- Video container for camera feed -->
+        <div id="video-container" style="display: none;">
+            <video id="video" width="640" height="480" autoplay muted></video>
+            <p id="person-count">People Count: 0</p>
+            <p id="object-label">Object: None</p>
+        </div>
+
+        <!-- Voice to text container -->
+        <div id="transcript" style="display: none;">
+            Voice to Text: <span id="voice-text"></span>
+        </div>
+
+        <!-- Keyboard input for mute users -->
+        <div id="keyboard-input-container" style="display: none; margin-top: 20px;">
+            <label for="keyboard-input">Type your message:</label>
+            <input type="text" id="keyboard-input" placeholder="Type here..." style="padding: 10px; width: 100%; max-width: 400px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc;">
+            <button id="speak-text" style="margin-top: 10px; display: none;">Speak</button>
+        </div>
+    </main>
+
+    <!-- About section -->
+    <section id="about" style="display: none;">
+        <div class="about-content">
+            <h2>About Deaf Aid</h2>
+            <p>
+                Deaf Aid is a web application designed to assist individuals with hearing impairments. It uses computer vision and speech recognition to provide real-time information about the user's surroundings.
+            </p>
+            <p>
+                The application uses the device's camera to detect people and objects, providing a visual description of the environment. It also uses the microphone to transcribe speech into text, which is displayed on the screen.
+            </p>
+            <p>
+                This application aims to improve communication and accessibility for the deaf and hard-of-hearing community.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="pics/deaf1.jpg" alt="About Deaf Aid">
+            <img src="pics/2pc.png" alt="About Deaf Aid">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

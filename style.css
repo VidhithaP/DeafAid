@@ -1,0 +1,222 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  nav {
+    background-color: #93a8ac;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px;
+  }
+  
+  nav .logo a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav .about a {
+    color: white;
+    text-decoration: none;
+    padding-right: 10px;
+    font-weight: 200;
+  }
+  nav .about a:hover{
+    color: #ddd;
+  }
+  
+  nav .earimg{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  
+  nav .leftsec{
+    display: flex;
+    gap:2px;
+    justify-content: flex-start;
+    
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+  }
+  
+  #home {
+    cursor: pointer;
+    
+  }
+  
+  main h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  
+  #start-camera, #start-microphone, #toggle-keyboard , #speak-text{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  #start-camera:hover, #start-microphone:hover, #toggle-keyboard:hover,#speak-text:hover {
+    background-color: #0056b3;
+  }
+  
+  #start-camera.active {
+    background-color: #FF6B6B; /* Red for "Stop Camera" */
+  }
+  
+  #start-camera.active:hover {
+    background-color: #FF4757;
+  }
+  
+  #start-microphone.active {
+    background-color: #FF6B6B; /* Red for "Stop Microphone" */
+  }
+  
+  #start-microphone.active:hover {
+    background-color: #FF4757;
+  }
+
+  #toggle-keyboard .active {
+    background-color: #FF6B6B; /* Red for "Stop Microphone" */
+  }
+  
+  #toggle-keyboard .active:hover {
+    background-color: #FF4757;
+  }
+  
+  
+  
+  #video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative; /* Make sure the video container is a positioning context. */
+  
+    width: 90%;
+    max-width: 700px;
+    margin-top: 20px;
+  }
+  
+  #video {
+    width: 100%; 
+    height: auto; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block; /* Important for layout */
+  }
+  
+  #person-count, #object-label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  #transcript {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #voice-text {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #about {
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    display: none;
+  }
+  
+  #about .about-content{
+    text-align: justify;
+  }
+  
+  #about .about-image {
+    padding: 5px;
+  }
+  
+  
+  @media (max-width: 600px) {
+    #video {
+        width: 100%;
+        height: auto;
+    }
+    main {
+        padding: 10px;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav .about {
+        margin-top: 10px;
+    }
+    .button-container{
+        flex-direction: column;
+    }
+    .button-container button{
+        width: 100%;
+    }
+  }
+
+  
+  #keyboard-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    resize: vertical;
+  }
