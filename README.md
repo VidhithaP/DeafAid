@@ -28,10 +28,10 @@ enhances independence and safety for deaf users, representing a leap forward in 
 
 ### 🛠️ Tools & Technologies Used
 
-● HTML/CSS/JavaScript for building the responsive UI. 
-● TensorFlow.js for loading and running the COCO-SSD object detection model in the browser. 
-● Web Speech API for speech-to-text transcription. 
-● Modern Browsers (Chrome/Firefox) for accessing the camera and microphone via 
+- HTML/CSS/JavaScript for building the responsive UI. 
+- TensorFlow.js for loading and running the COCO-SSD object detection model in the browser. 
+- Web Speech API for speech-to-text transcription. 
+- Modern Browsers (Chrome/Firefox) for accessing the camera and microphone via 
 navigator.mediaDevices. 
 
 
